@@ -16,3 +16,34 @@
         Series = 9 + 99 + 999 + 9999 + 99999 + 999999 + 9999999
         Sum = 11111103
 */
+#include <stdio.h>
+
+int main(){
+
+    int ip;
+
+    printf("Enter number :\n");
+    scanf("%d" , &ip);
+
+    int plus9 , sum = 0;
+
+    printf("Series = ");
+
+    for (int i = 0; i < ip; i++)
+    {
+
+        plus9 = plus9 * 10 + 9 ;
+        sum += plus9;
+
+        printf("%d", plus9);
+
+        if(i < ip-1 && i != ip){
+            printf(" + ");
+        }
+
+    }
+
+    printf("\nSum = %d", sum);
+
+    return 0;
+}
